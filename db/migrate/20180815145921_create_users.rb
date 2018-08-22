@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.references :city, foreign_key: true
       t.string :email
       t.boolean :std
+      t.string :password_digest
 
       t.timestamps
     end
