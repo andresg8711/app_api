@@ -4,8 +4,8 @@ class CoursesController < ApplicationController
     render json: @courses, status: :ok
   end
   def create
-    puts params.permit(:nombre)
-    @course = Course.create(params.permit(:nombre))
-    render json: @course.errors.full_messages, status: :ok
+    puts params.permit(:name, :std)
+    @course = Course.create!(params.permit(:name, :std))
+    render json: @course, status: :ok
   end
 end

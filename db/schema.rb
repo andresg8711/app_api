@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_135638) do
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "nombre"
+    t.string "name"
     t.boolean "std"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
